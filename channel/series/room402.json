@@ -7,696 +7,132 @@
   "platform": "youtube",
   "seed_base": 10,
   "transition": "dissolve",
-  "voice": {
-    "name": "am_onyx",
-    "speed": 0.92,
-    "gap": 0.62
-  },
-  "grade": {
-    "exposure": 1.06,
-    "contrast": 1.18,
-    "saturation": 0.88,
-    "bloom": 0.26,
-    "halation": 0.18,
-    "grain": 0.03,
-    "vignette": 0.58,
-    "ca": 1.0,
-    "scrim": 0.34,
-    "split": [
-      "#2b4a6b",
-      "#ffd9a8",
-      0.26
-    ]
-  },
-  "captions": {
-    "family": "barlow",
-    "size_h": 0.043,
-    "color": "#f3f1ea",
-    "highlight": "#ffcc33",
-    "uppercase": true,
-    "stroke": 0.05,
-    "shadow": 0.16,
-    "words_per_chunk": 4,
-    "max_chars": 20,
-    "anchor_y": 0.755,
-    "pop": 0.14
-  },
-  "tags": [
-    "#room402",
-    "#horrorstory",
-    "#creepy",
-    "#storytime",
-    "#fyp"
-  ],
+  "voice": {"name": "am_onyx", "speed": 0.92, "gap": 0.62},
+  "grade": {"exposure": 1.06, "contrast": 1.18, "saturation": 0.88, "bloom": 0.26, "halation": 0.18, "grain": 0.03, "vignette": 0.58, "ca": 1.0, "scrim": 0.34, "split": ["#2b4a6b", "#ffd9a8", 0.26]},
+  "captions": {"family": "barlow", "size_h": 0.043, "color": "#f3f1ea", "highlight": "#ffcc33", "uppercase": true, "stroke": 0.05, "shadow": 0.16, "words_per_chunk": 4, "max_chars": 20, "anchor_y": 0.755, "pop": 0.14},
+  "tags": ["#room402", "#horrorstory", "#creepy", "#storytime", "#fyp"],
   "scripts_note": "Original fiction. The narrator is telling a story, the description says so, and the QC/delivery copy never presents it as testimony.",
+  "fiction": true,
   "episodes": [
+    {
+      "part": 1,
+      "slug": "room-402",
+      "title": "THE FOURTH FLOOR",
+      "open_card": {"kicker": "A NIGHT CLERK'S ACCOUNT", "title": "ROOM\n402", "hold": 2.3},
+      "end_card": {"title": "ROOM 402", "subtitle": "Part Two: The Register", "hold": 2.6},
+      "hook": "Part 1 of ROOM 402. The phone rang at two fourteen, from a room sealed since 1996.",
+      "social": {"body": "A night clerk takes a call from room 402. It has been sealed since the fire, in 1996. Nobody has been on the fourth floor for thirty years."},
+      "tags": ["#room402", "#part1", "#creepy", "#storytime", "#horrorstory", "#fyp"],
+      "script": [
+        {"id": "l1", "text": "The phone rang at two fourteen in the morning.", "set": "corridor", "date": "2:14 A.M.", "set_params": {"lights": [2.6, 6.4, 10.2, 14.0, 17.8], "dead": [3], "cold_end": 0.35, "haze": 0.6, "dust": 90}},
+        {"id": "l2", "text": "The call came from room four oh two.", "set": "door", "label": "THE FOURTH FLOOR", "set_params": {"number": "402", "spill": "#ff7a33", "spill_amt": 1.5, "dist": 4.4}, "cam": {"fov": 68, "pos": [0.0, 1.34, 0.0], "z": [[0, 0.0], [4, 0.55]]}},
+        {"id": "l3", "text": "Room four oh two has been sealed since the fire. Nineteen ninety six.", "set": "door", "date": "SEALED \u00b7 14 OCT 1996", "set_params": {"number": "402", "door": "#15181e", "spill": "#ff6a2a", "spill_amt": 0.8, "dist": 3.1}, "cam": {"fov": 54, "pos": [0.0, 1.3, 0.0], "z": [[0, 0.0], [4, 0.35]], "pitch": [[0, -0.03], [4, 0.02]], "yaw": [[0, 0.01], [4, -0.015]]}},
+        {"id": "l4", "text": "No key. No guest. No name in the register.", "set": "corridor", "label": "THE REGISTER", "set_params": {"lights": [2.6, 6.4, 10.2, 14.0, 17.8], "dead": [1, 3], "door": "#101419", "haze": 0.7, "dust": 60}},
+        {"id": "l5", "text": "The night clerk answered anyway.", "set": "corridor_far", "date": "2:14 A.M.", "set_params": {"lights": [3.0, 7.2, 11.4, 15.6], "dead": [2], "cold_end": 0.55, "rim": "#ff5b28", "haze": 0.75}},
+        {"id": "l6", "text": "The voice was calm. It said, I'm in the bathroom, and I can't find the door.", "set": "room", "label": "ROOM 402 \u00b7 INTERIOR", "set_params": {"lamp": [1.3, 1.4, 2.2], "haze": 0.5, "figure": {"x": 0.58, "z": 3.55, "rim": 0.9, "pose": {"arms": 0.16}}}},
+        {"id": "l7", "text": "He walked the fourth floor alone. Every door was locked.", "set": "corridor", "label": "THE FOURTH FLOOR", "set_params": {"lights": [2.2, 5.6, 9.0, 12.4, 15.8, 19.2], "dead": [0, 4], "haze": 0.65, "dust": 110, "cold_end": 0.2, "figure": {"x": -0.15, "z": 6.5, "rim": 0.8, "pose": {"stance": 0.22}}}},
+        {"id": "l8", "text": "Room four oh two was warm. The tap was running. The window was painted shut.", "set": "room", "date": "2:41 A.M.", "set_params": {"lamp": [1.3, 1.4, 2.2], "haze": 0.45, "rain": 0.8, "figure": {"x": 0.32, "z": 3.3, "rim": 1.0, "pose": {"hand_up": 0.5}}}},
+        {"id": "l9", "text": "At sunrise they traced the call. To the phone on his desk. The one he was still holding.", "set": "card", "kicker": "THE CALL WAS TRACED AT 6:02 A.M."}
+      ]
+    },
+    {
+      "part": 2,
+      "slug": "room-402-part2",
+      "title": "THE REGISTER",
+      "open_card": {"kicker": "PART TWO", "title": "THE\nREGISTER", "hold": 2.2},
+      "end_card": {"title": "ROOM 402", "subtitle": "Part Three: The Guest", "hold": 2.6},
+      "hook": "Part 2 of ROOM 402. If you missed part 1: the phone rang at two fourteen from a room that has been sealed since 1996.",
+      "social": {"body": "Part 1 ended with the call traced to his own desk phone. Tonight he opens the register. Start with Part 1 if you haven't."},
+      "tags": ["#room402", "#part2", "#creepy", "#storytime", "#horrorstory", "#fyp"],
+      "script": [
+        {"id": "l1", "text": "By three in the morning, the register was the only thing left to check.", "set": "corridor", "date": "3:05 A.M.", "set_params": {"lights": [2.6, 6.4, 10.2, 14.0], "dead": [3], "haze": 0.62, "dust": 80}},
+        {"id": "l2", "text": "Room four oh two was sealed the night of the fire. Everyone signed off on it.", "set": "door", "label": "THE FOURTH FLOOR", "set_params": {"dist": 4.4, "number": "402", "spill": "#ff7a33", "spill_amt": 1.3}, "cam": {"fov": 68, "pos": [0.0, 1.34, 0.0], "z": [[0, 0.0], [4, 0.55]]}},
+        {"id": "l3", "text": "The last entry in the book was dated fourteenth October, nineteen ninety six.", "set": "card", "kicker": "THE REGISTER", "title": "14 OCT\n1996", "subtitle": "the last entry in the book"},
+        {"id": "l4", "text": "Under the date, a signature. The ink had not dried.", "set": "door", "date": "2:14 A.M.", "set_params": {"dist": 3.1, "number": "402", "spill": "#ff6a2a", "spill_amt": 0.9}, "cam": {"fov": 54, "pos": [0.0, 1.3, 0.0], "z": [[0, 0.0], [4, 0.35]], "pitch": [[0, -0.03], [4, 0.02]], "yaw": [[0, 0.01], [4, -0.015]]}},
+        {"id": "l5", "text": "He knew the handwriting. It was his own.", "set": "room", "label": "ROOM 402 \u00b7 INTERIOR", "set_params": {"lamp": [1.3, 1.4, 2.2], "haze": 0.5, "figure": {"x": 0.62, "z": 3.9, "rim": 0.85, "pose": {"arms": 0.2}}}},
+        {"id": "l6", "text": "The entry was logged at two fourteen in the morning. The same minute the phone rang.", "set": "corridor_far", "date": "2:14 A.M.", "set_params": {"lights": [3.0, 7.2, 11.4, 15.6], "dead": [2], "cold_end": 0.6, "rim": "#ff5b28", "haze": 0.78, "figure": {"x": 0.0, "z": 12.0, "rim": 1.25}}},
+        {"id": "l7", "text": "He turned the page. Tonight's date was already written. In his hand.", "set": "room", "date": "3:41 A.M.", "set_params": {"lamp": [1.3, 1.4, 2.2], "haze": 0.45, "rain": 0.85, "figure": {"x": 0.3, "z": 3.3, "rim": 1.05, "pose": {"hand_up": 0.55}}}},
+        {"id": "l8", "text": "Then, one by one, the corridor lamps began to go out.", "set": "corridor", "label": "THE FOURTH FLOOR", "set_params": {"lights": [2.2, 5.4, 8.6, 11.8, 15.0, 18.2], "out_at": [[0.7, 0], [1.3, 1], [1.9, 2], [2.5, 3], [3.1, 4]], "haze": 0.7, "dust": 100, "cold_end": 0.25}},
+        {"id": "l9", "text": "The register lists two names for tonight. His. And the one already inside room four oh two.", "set": "card", "kicker": "TONIGHT'S PAGE", "title": "TWO\nNAMES", "transition": "dip"}
+      ]
+    },
+    {
+      "part": 3,
+      "slug": "room-402-part3",
+      "title": "THE GUEST",
+      "open_card": {"kicker": "PART THREE", "title": "THE\nGUEST", "hold": 2.2},
+      "end_card": {"title": "ROOM 402", "subtitle": "Part Four: Checkout", "hold": 2.6},
+      "hook": "Part 3 of ROOM 402. Part 2 ended with two names on tonight's page \u2014 one of them already in the room.",
+      "social": {"body": "Two names went into the register that night. One of them was already dead. Tonight he goes inside room 402. Start with Part 1."},
+      "tags": ["#room402", "#part3", "#theguest", "#creepy", "#horrorstory", "#fyp"],
+      "script": [
+        {"id": "l1", "text": "The page listed two names for tonight. He had written only one.", "set": "corridor", "date": "2:41 A.M.", "set_params": {"lights": [2.6, 6.4, 10.2, 14.0], "dead": [1], "haze": 0.6, "dust": 80}},
+        {"id": "l2", "text": "Room four oh two had no lock. The handle turned before he touched it.", "set": "door", "label": "THE FOURTH FLOOR", "set_params": {"dist": 4.4, "number": "402", "spill": "#ff7a33", "spill_amt": 1.3}, "cam": {"fov": 68, "pos": [0.0, 1.34, 0.0], "z": [[0, 0.0], [4, 0.5]]}},
+        {"id": "l3", "text": "He stepped inside and closed the door, the way you do when someone is waiting.", "set": "card", "kicker": "TONIGHT'S PAGE", "title": "THE\nGUEST", "subtitle": "no arrival time written"},
+        {"id": "l4", "text": "A man stood with his back to the door, in a coat thirty years out of date.", "set": "room", "label": "ROOM 402 \u00b7 INTERIOR", "set_params": {"lamp": [1.3, 1.4, 2.2], "haze": 0.52, "figure": {"x": 0.62, "z": 3.9, "rim": 0.95, "pose": {"arms": 0.05}}}},
+        {"id": "l5", "text": "He said, you're in my room. The man said his name without turning around.", "set": "door", "date": "2:41 A.M.", "set_params": {"dist": 3.1, "number": "402", "spill": "#ff6a2a", "spill_amt": 0.9}, "cam": {"fov": 54, "pos": [0.0, 1.3, 0.0], "z": [[0, 0.0], [4, 0.35]], "pitch": [[0, -0.03], [4, 0.02]], "yaw": [[0, 0.012], [4, -0.016]]}},
+        {"id": "l6", "text": "On the nightstand, tonight's entry was open. The second name was already written.", "set": "room", "date": "2:41 A.M.", "set_params": {"lamp": [1.3, 1.4, 2.2], "haze": 0.45, "rain": 0.85, "figure": {"x": 0.34, "z": 3.3, "rim": 1.1, "pose": {"hand_up": 0.5}}}},
+        {"id": "l7", "text": "The ink was still wet. The handwriting was his, from an angle he never wrote from.", "set": "corridor_far", "date": "2:41 A.M.", "set_params": {"lights": [3.0, 7.2, 11.4, 15.6], "dead": [3], "cold_end": 0.6, "rim": "#ff5b28", "haze": 0.78, "figure": {"x": 0.0, "z": 12.0, "rim": 1.25}}},
+        {"id": "l8", "text": "Then the guest stood, and every lamp in the corridor went out at once.", "set": "corridor", "label": "THE FOURTH FLOOR", "set_params": {"lights": [2.2, 5.0, 7.8, 10.6, 13.4, 16.2], "out_at": [[0.5, 0], [0.8, 1], [1.1, 2], [1.4, 3], [1.7, 4]], "haze": 0.72, "dust": 100, "cold_end": 0.22, "figure": {"x": 0.0, "z": 9.0, "rim": 1.15}, "rim": "#ff5b28"}},
+        {"id": "l9", "text": "He signed the second name. Someone in the corridor said: see you at checkout.", "set": "card", "kicker": "CHECK-IN", "title": "2:41\nA.M.", "subtitle": "the fourth floor light came on", "transition": "dip"}
+      ]
+    },
     {
       "part": 4,
       "slug": "room-402-part4",
       "title": "CHECKOUT",
-      "open_card": {
-        "kicker": "PART FOUR",
-        "title": "CHECK\nOUT",
-        "hold": 2.2
-      },
-      "end_card": {
-        "title": "ROOM 402",
-        "subtitle": "Part Five: The Night Manager",
-        "hold": 2.6
-      },
+      "open_card": {"kicker": "PART FOUR", "title": "CHECK\nOUT", "hold": 2.2},
+      "end_card": {"title": "ROOM 402", "subtitle": "Part Five: The Night Manager", "hold": 2.6},
       "hook": "Part 4 of ROOM 402. He signed the register in Part 3. Now the bill arrives.",
-      "social": {
-        "body": "Part 3 ended with a second name in the book. Checkout is at eleven, and nobody has been on the fourth floor since 1996."
-      },
+      "social": {"body": "Part 3 ended with a second name in the book. Checkout is at eleven, and nobody has been on the fourth floor since 1996."},
       "script": [
-        {
-          "id": "l1",
-          "text": "Checkout is at eleven. He has been on the fourth floor since two fourteen.",
-          "set": "corridor",
-          "date": "3:59 A.M.",
-          "set_params": {
-            "lights": [
-              2.6,
-              6.4,
-              10.2,
-              14.0
-            ],
-            "dead": [
-              2
-            ],
-            "haze": 0.6,
-            "dust": 80
-          }
-        },
-        {
-          "id": "l2",
-          "text": "The register is closed. The pen is not where he left it.",
-          "set": "door",
-          "label": "THE FOURTH FLOOR",
-          "set_params": {
-            "dist": 4.4,
-            "number": "402",
-            "spill": "#ff7a33",
-            "spill_amt": 1.3
-          },
-          "cam": {
-            "fov": 68,
-            "pos": [
-              0.0,
-              1.34,
-              0.0
-            ],
-            "z": [
-              [
-                0,
-                0.0
-              ],
-              [
-                4,
-                0.5
-              ]
-            ]
-          }
-        },
-        {
-          "id": "l3",
-          "text": "The guest is still at the window. The bed has not been slept in.",
-          "set": "card",
-          "kicker": "CHECKOUT",
-          "title": "11:00\nA.M.",
-          "subtitle": "one night, one name"
-        },
-        {
-          "id": "l4",
-          "text": "He asks how long the guest has been staying. The guest says: since the fire.",
-          "set": "room",
-          "label": "ROOM 402 \u00b7 INTERIOR",
-          "set_params": {
-            "lamp": [
-              1.3,
-              1.4,
-              2.2
-            ],
-            "haze": 0.52,
-            "figure": {
-              "x": 0.62,
-              "z": 3.9,
-              "rim": 0.95,
-              "pose": {
-                "arms": 0.05
-              }
-            }
-          }
-        },
-        {
-          "id": "l5",
-          "text": "In the drawer are thirty years of pages, every one signed in his own hand.",
-          "set": "door",
-          "date": "3:59 A.M.",
-          "set_params": {
-            "dist": 3.1,
-            "number": "402",
-            "spill": "#ff6a2a",
-            "spill_amt": 0.9
-          },
-          "cam": {
-            "fov": 54,
-            "pos": [
-              0.0,
-              1.3,
-              0.0
-            ],
-            "z": [
-              [
-                0,
-                0.0
-              ],
-              [
-                4,
-                0.35
-              ]
-            ],
-            "pitch": [
-              [
-                0,
-                -0.03
-              ],
-              [
-                4,
-                0.02
-              ]
-            ],
-            "yaw": [
-              [
-                0,
-                0.012
-              ],
-              [
-                4,
-                -0.016
-              ]
-            ]
-          }
-        },
-        {
-          "id": "l6",
-          "text": "He is not the night manager. He has never been the night manager.",
-          "set": "corridor_far",
-          "date": "3:59 A.M.",
-          "set_params": {
-            "lights": [
-              3.0,
-              7.2,
-              11.4,
-              15.6
-            ],
-            "dead": [
-              3
-            ],
-            "cold_end": 0.6,
-            "rim": "#ff5b28",
-            "haze": 0.78,
-            "figure": {
-              "x": 0.0,
-              "z": 12.0,
-              "rim": 1.25
-            }
-          }
-        },
-        {
-          "id": "l7",
-          "text": "The lift arrives by itself, and the doors open on the fifth floor.",
-          "set": "corridor",
-          "label": "THE FIFTH FLOOR",
-          "set_params": {
-            "lights": [
-              2.2,
-              5.0,
-              7.8,
-              10.6,
-              13.4,
-              16.2
-            ],
-            "out_at": [
-              [
-                0.5,
-                0
-              ],
-              [
-                0.8,
-                1
-              ],
-              [
-                1.1,
-                2
-              ],
-              [
-                1.4,
-                3
-              ],
-              [
-                1.7,
-                4
-              ]
-            ],
-            "haze": 0.72,
-            "dust": 100,
-            "cold_end": 0.22,
-            "rim": "#ff5b28",
-            "figure": {
-              "x": 0.0,
-              "z": 9.0,
-              "rim": 1.15
-            }
-          }
-        },
-        {
-          "id": "l8",
-          "text": "The manager is waiting, in the same coat, with the same face.",
-          "set": "card",
-          "kicker": "CHECKOUT",
-          "title": "ROOM\n402",
-          "subtitle": "he is the next guest",
-          "transition": "dip"
-        }
+        {"id": "l1", "text": "Checkout is at eleven. He has been on the fourth floor since two fourteen.", "set": "corridor", "date": "3:59 A.M.", "set_params": {"lights": [2.6, 6.4, 10.2, 14.0], "dead": [2], "haze": 0.6, "dust": 80}},
+        {"id": "l2", "text": "The register is closed. The pen is not where he left it.", "set": "door", "label": "THE FOURTH FLOOR", "set_params": {"dist": 4.4, "number": "402", "spill": "#ff7a33", "spill_amt": 1.3}, "cam": {"fov": 68, "pos": [0.0, 1.34, 0.0], "z": [[0, 0.0], [4, 0.5]]}},
+        {"id": "l3", "text": "The guest is still at the window. The bed has not been slept in.", "set": "card", "kicker": "CHECKOUT", "title": "11:00\nA.M.", "subtitle": "one night, one name"},
+        {"id": "l4", "text": "He asks how long the guest has been staying. The guest says: since the fire.", "set": "room", "label": "ROOM 402 \u00b7 INTERIOR", "set_params": {"lamp": [1.3, 1.4, 2.2], "haze": 0.52, "figure": {"x": 0.62, "z": 3.9, "rim": 0.95, "pose": {"arms": 0.05}}}},
+        {"id": "l5", "text": "In the drawer are thirty years of pages, every one signed in his own hand.", "set": "door", "date": "3:59 A.M.", "set_params": {"dist": 3.1, "number": "402", "spill": "#ff6a2a", "spill_amt": 0.9}, "cam": {"fov": 54, "pos": [0.0, 1.3, 0.0], "z": [[0, 0.0], [4, 0.35]], "pitch": [[0, -0.03], [4, 0.02]], "yaw": [[0, 0.012], [4, -0.016]]}},
+        {"id": "l6", "text": "He is not the night manager. He has never been the night manager.", "set": "corridor_far", "date": "3:59 A.M.", "set_params": {"lights": [3.0, 7.2, 11.4, 15.6], "dead": [3], "cold_end": 0.6, "rim": "#ff5b28", "haze": 0.78, "figure": {"x": 0.0, "z": 12.0, "rim": 1.25}}},
+        {"id": "l7", "text": "The lift arrives by itself, and the doors open on the fifth floor.", "set": "corridor", "label": "THE FIFTH FLOOR", "set_params": {"lights": [2.2, 5.0, 7.8, 10.6, 13.4, 16.2], "out_at": [[0.5, 0], [0.8, 1], [1.1, 2], [1.4, 3], [1.7, 4]], "haze": 0.72, "dust": 100, "cold_end": 0.22, "rim": "#ff5b28", "figure": {"x": 0.0, "z": 9.0, "rim": 1.15}}},
+        {"id": "l8", "text": "The manager is waiting, in the same coat, with the same face.", "set": "card", "kicker": "CHECKOUT", "title": "ROOM\n402", "subtitle": "he is the next guest", "transition": "dip"}
       ]
     },
     {
       "part": 5,
       "slug": "room-402-part5",
       "title": "THE NIGHT MANAGER",
-      "open_card": {
-        "kicker": "PART FIVE",
-        "title": "NIGHT\nMANAGER",
-        "hold": 2.2
-      },
-      "end_card": {
-        "title": "ROOM 402",
-        "subtitle": "Part Six: Vacancy",
-        "hold": 2.6
-      },
+      "open_card": {"kicker": "PART FIVE", "title": "NIGHT\nMANAGER", "hold": 2.2},
+      "end_card": {"title": "ROOM 402", "subtitle": "Part Six: Vacancy", "hold": 2.6},
       "hook": "Part 5 of ROOM 402. The fifth floor was never on the plan.",
-      "social": {
-        "body": "The lift opened on a floor that is not on the plan. Somebody has been working there since 1996."
-      },
+      "social": {"body": "The lift opened on a floor that is not on the plan. Somebody has been working there since 1996."},
       "script": [
-        {
-          "id": "l1",
-          "text": "The fifth floor has no rooms. It has one office and a filing cabinet.",
-          "set": "corridor",
-          "date": "4:44 A.M.",
-          "set_params": {
-            "lights": [
-              2.6,
-              6.4,
-              10.2,
-              14.0
-            ],
-            "dead": [
-              0
-            ],
-            "haze": 0.58,
-            "dust": 70
-          }
-        },
-        {
-          "id": "l2",
-          "text": "Behind the desk sits a man in the same coat, with the same face.",
-          "set": "card",
-          "kicker": "THE NIGHT MANAGER",
-          "title": "FIFTH\nFLOOR",
-          "subtitle": "nobody has worked here since 1996"
-        },
-        {
-          "id": "l3",
-          "text": "He shows him the duty roster. His name is on every night for thirty years.",
-          "set": "door",
-          "label": "THE FIFTH FLOOR",
-          "set_params": {
-            "dist": 4.6,
-            "number": "501",
-            "spill": "#7a8cff",
-            "spill_amt": 1.1
-          },
-          "cam": {
-            "fov": 66,
-            "pos": [
-              0.0,
-              1.34,
-              0.0
-            ],
-            "z": [
-              [
-                0,
-                0.0
-              ],
-              [
-                4,
-                0.6
-              ]
-            ]
-          }
-        },
-        {
-          "id": "l4",
-          "text": "The job comes with the room, he says. The room comes with the job.",
-          "set": "room",
-          "label": "THE MANAGER'S OFFICE",
-          "set_params": {
-            "lamp": [
-              1.5,
-              1.2,
-              3.0
-            ],
-            "haze": 0.6,
-            "rain": 0.35,
-            "figure": {
-              "x": 0.55,
-              "z": 3.6,
-              "rim": 1.0,
-              "pose": {
-                "hand_up": 0.35
-              }
-            }
-          }
-        },
-        {
-          "id": "l5",
-          "text": "Then he hears the phone. One floor down, in a room that is sealed.",
-          "set": "corridor_far",
-          "date": "4:44 A.M.",
-          "set_params": {
-            "lights": [
-              3.0,
-              7.2,
-              11.4,
-              15.6
-            ],
-            "dead": [
-              1
-            ],
-            "cold_end": 0.55,
-            "rim": "#ff5b28",
-            "haze": 0.8,
-            "figure": {
-              "x": 0.0,
-              "z": 12.0,
-              "rim": 1.1
-            }
-          }
-        },
-        {
-          "id": "l6",
-          "text": "The register on the desk is open at tonight. One line is still empty.",
-          "set": "door",
-          "date": "4:44 A.M.",
-          "set_params": {
-            "dist": 3.1,
-            "number": "501",
-            "spill": "#7a8cff",
-            "spill_amt": 0.85
-          },
-          "cam": {
-            "fov": 54,
-            "pos": [
-              0.0,
-              1.3,
-              0.0
-            ],
-            "z": [
-              [
-                0,
-                0.0
-              ],
-              [
-                4,
-                0.35
-              ]
-            ],
-            "pitch": [
-              [
-                0,
-                -0.03
-              ],
-              [
-                4,
-                0.02
-              ]
-            ],
-            "yaw": [
-              [
-                0,
-                0.012
-              ],
-              [
-                4,
-                -0.016
-              ]
-            ]
-          }
-        },
-        {
-          "id": "l7",
-          "text": "The manager holds out the pen. Somewhere below, someone is checking in.",
-          "set": "corridor",
-          "label": "THE FIFTH FLOOR",
-          "set_params": {
-            "lights": [
-              2.2,
-              5.0,
-              7.8,
-              10.6,
-              13.4,
-              16.2
-            ],
-            "out_at": [
-              [
-                0.6,
-                5
-              ],
-              [
-                1.0,
-                4
-              ],
-              [
-                1.4,
-                3
-              ]
-            ],
-            "haze": 0.7,
-            "dust": 90,
-            "cold_end": 0.25
-          }
-        },
-        {
-          "id": "l8",
-          "text": "He takes the pen, because he knows whose name goes in it.",
-          "set": "card",
-          "kicker": "VACANCY",
-          "title": "ONE\nLINE",
-          "subtitle": "he knows whose name goes in it",
-          "transition": "dip"
-        }
+        {"id": "l1", "text": "The fifth floor has no rooms. It has one office and a filing cabinet.", "set": "corridor", "date": "4:44 A.M.", "set_params": {"lights": [2.6, 6.4, 10.2, 14.0], "dead": [0], "haze": 0.58, "dust": 70}},
+        {"id": "l2", "text": "Behind the desk sits a man in the same coat, with the same face.", "set": "card", "kicker": "THE NIGHT MANAGER", "title": "FIFTH\nFLOOR", "subtitle": "nobody has worked here since 1996"},
+        {"id": "l3", "text": "He shows him the duty roster. His name is on every night for thirty years.", "set": "door", "label": "THE FIFTH FLOOR", "set_params": {"dist": 4.6, "number": "501", "spill": "#7a8cff", "spill_amt": 1.1}, "cam": {"fov": 66, "pos": [0.0, 1.34, 0.0], "z": [[0, 0.0], [4, 0.6]]}},
+        {"id": "l4", "text": "The job comes with the room, he says. The room comes with the job.", "set": "room", "label": "THE MANAGER'S OFFICE", "set_params": {"lamp": [1.5, 1.2, 3.0], "haze": 0.6, "rain": 0.35, "figure": {"x": 0.55, "z": 3.6, "rim": 1.0, "pose": {"hand_up": 0.35}}}},
+        {"id": "l5", "text": "Then he hears the phone. One floor down, in a room that is sealed.", "set": "corridor_far", "date": "4:44 A.M.", "set_params": {"lights": [3.0, 7.2, 11.4, 15.6], "dead": [1], "cold_end": 0.55, "rim": "#ff5b28", "haze": 0.8, "figure": {"x": 0.0, "z": 12.0, "rim": 1.1}}},
+        {"id": "l6", "text": "The register on the desk is open at tonight. One line is still empty.", "set": "door", "date": "4:44 A.M.", "set_params": {"dist": 3.1, "number": "501", "spill": "#7a8cff", "spill_amt": 0.85}, "cam": {"fov": 54, "pos": [0.0, 1.3, 0.0], "z": [[0, 0.0], [4, 0.35]], "pitch": [[0, -0.03], [4, 0.02]], "yaw": [[0, 0.012], [4, -0.016]]}},
+        {"id": "l7", "text": "The manager holds out the pen. Somewhere below, someone is checking in.", "set": "corridor", "label": "THE FIFTH FLOOR", "set_params": {"lights": [2.2, 5.0, 7.8, 10.6, 13.4, 16.2], "out_at": [[0.6, 5], [1.0, 4], [1.4, 3]], "haze": 0.7, "dust": 90, "cold_end": 0.25}},
+        {"id": "l8", "text": "He takes the pen, because he knows whose name goes in it.", "set": "card", "kicker": "VACANCY", "title": "ONE\nLINE", "subtitle": "he knows whose name goes in it", "transition": "dip"}
       ]
     },
     {
       "part": 6,
       "slug": "room-402-part6",
       "title": "VACANCY",
-      "open_card": {
-        "kicker": "PART SIX",
-        "title": "VACAN\nCY",
-        "hold": 2.2
-      },
-      "end_card": {
-        "title": "ROOM 402",
-        "subtitle": "Part Seven: The Call",
-        "hold": 2.6
-      },
+      "open_card": {"kicker": "PART SIX", "title": "VACAN\nCY", "hold": 2.2},
+      "end_card": {"title": "ROOM 402", "subtitle": "Part Seven: The Call", "hold": 2.6},
       "hook": "Part 6 of ROOM 402. There is always one room available.",
-      "social": {
-        "body": "He signed the last empty line. By morning the fourth floor had a new guest, and the number on the door had changed."
-      },
+      "social": {"body": "He signed the last empty line. By morning the fourth floor had a new guest, and the number on the door had changed."},
       "script": [
-        {
-          "id": "l1",
-          "text": "He writes his own name and the corridor goes quiet.",
-          "set": "corridor",
-          "date": "5:05 A.M.",
-          "set_params": {
-            "lights": [
-              2.6,
-              6.4,
-              10.2,
-              14.0
-            ],
-            "dead": [],
-            "haze": 0.5,
-            "dust": 60
-          }
-        },
-        {
-          "id": "l2",
-          "text": "Room four oh two is clean. The window is open. The rain has stopped.",
-          "set": "card",
-          "kicker": "VACANCY",
-          "title": "5:05\nA.M.",
-          "subtitle": "the last line is taken"
-        },
-        {
-          "id": "l3",
-          "text": "On the door, the number has changed. It now reads four oh three.",
-          "set": "door",
-          "label": "THE FOURTH FLOOR",
-          "set_params": {
-            "dist": 3.4,
-            "number": "403",
-            "spill": "#ff7a33",
-            "spill_amt": 1.0
-          },
-          "cam": {
-            "fov": 60,
-            "pos": [
-              0.0,
-              1.32,
-              0.0
-            ],
-            "z": [
-              [
-                0,
-                0.0
-              ],
-              [
-                4,
-                0.45
-              ]
-            ]
-          }
-        },
-        {
-          "id": "l4",
-          "text": "At the end of the corridor, a man in a manager's coat is walking away.",
-          "set": "corridor_far",
-          "date": "5:05 A.M.",
-          "set_params": {
-            "lights": [
-              3.0,
-              7.2,
-              11.4,
-              15.6
-            ],
-            "dead": [],
-            "cold_end": 0.5,
-            "rim": "#ff5b28",
-            "haze": 0.7,
-            "figure": {
-              "x": 0.0,
-              "z": 12.0,
-              "rim": 1.05
-            }
-          }
-        },
-        {
-          "id": "l5",
-          "text": "The register on the nightstand has his name on every page for thirty years.",
-          "set": "room",
-          "label": "ROOM 402 \u00b7 INTERIOR",
-          "set_params": {
-            "lamp": [
-              1.3,
-              1.4,
-              2.2
-            ],
-            "haze": 0.45,
-            "rain": 0.0,
-            "figure": {
-              "x": 0.3,
-              "z": 3.4,
-              "rim": 1.0
-            }
-          }
-        },
-        {
-          "id": "l6",
-          "text": "So he sits on the edge of the bed, and waits for the phone to ring.",
-          "set": "room",
-          "date": "5:05 A.M.",
-          "set_params": {
-            "lamp": [
-              1.3,
-              1.4,
-              2.2
-            ],
-            "haze": 0.42,
-            "rain": 0.0,
-            "figure": {
-              "x": 0.0,
-              "z": 3.2,
-              "rim": 0.85,
-              "pose": {
-                "arms": 0.0
-              }
-            }
-          }
-        },
-        {
-          "id": "l7",
-          "text": "In an hour the phone rings, and a voice asks for room four oh two.",
-          "set": "corridor",
-          "label": "THE FOURTH FLOOR",
-          "set_params": {
-            "lights": [
-              2.2,
-              5.0,
-              7.8,
-              10.6,
-              13.4,
-              16.2
-            ],
-            "out_at": [
-              [
-                0.6,
-                0
-              ],
-              [
-                1.0,
-                1
-              ],
-              [
-                1.4,
-                2
-              ],
-              [
-                1.8,
-                3
-              ],
-              [
-                2.2,
-                4
-              ]
-            ],
-            "haze": 0.72,
-            "dust": 100,
-            "cold_end": 0.22,
-            "rim": "#ff5b28",
-            "figure": {
-              "x": 0.0,
-              "z": 9.0,
-              "rim": 1.1
-            }
-          }
-        },
-        {
-          "id": "l8",
-          "text": "And this time, he is the one who answers.",
-          "set": "card",
-          "kicker": "VACANCY",
-          "title": "ROOM\n403",
-          "subtitle": "there is always one room",
-          "transition": "dip"
-        }
+        {"id": "l1", "text": "He writes his own name and the corridor goes quiet.", "set": "corridor", "date": "5:05 A.M.", "set_params": {"lights": [2.6, 6.4, 10.2, 14.0], "dead": [], "haze": 0.5, "dust": 60}},
+        {"id": "l2", "text": "Room four oh two is clean. The window is open. The rain has stopped.", "set": "card", "kicker": "VACANCY", "title": "5:05\nA.M.", "subtitle": "the last line is taken"},
+        {"id": "l3", "text": "On the door, the number has changed. It now reads four oh three.", "set": "door", "label": "THE FOURTH FLOOR", "set_params": {"dist": 3.4, "number": "403", "spill": "#ff7a33", "spill_amt": 1.0}, "cam": {"fov": 60, "pos": [0.0, 1.32, 0.0], "z": [[0, 0.0], [4, 0.45]]}},
+        {"id": "l4", "text": "At the end of the corridor, a man in a manager's coat is walking away.", "set": "corridor_far", "date": "5:05 A.M.", "set_params": {"lights": [3.0, 7.2, 11.4, 15.6], "dead": [], "cold_end": 0.5, "rim": "#ff5b28", "haze": 0.7, "figure": {"x": 0.0, "z": 12.0, "rim": 1.05}}},
+        {"id": "l5", "text": "The register on the nightstand has his name on every page for thirty years.", "set": "room", "label": "ROOM 402 \u00b7 INTERIOR", "set_params": {"lamp": [1.3, 1.4, 2.2], "haze": 0.45, "rain": 0.0, "figure": {"x": 0.3, "z": 3.4, "rim": 1.0}}},
+        {"id": "l6", "text": "So he sits on the edge of the bed, and waits for the phone to ring.", "set": "room", "date": "5:05 A.M.", "set_params": {"lamp": [1.3, 1.4, 2.2], "haze": 0.42, "rain": 0.0, "figure": {"x": 0.0, "z": 3.2, "rim": 0.85, "pose": {"arms": 0.0}}}},
+        {"id": "l7", "text": "In an hour the phone rings, and a voice asks for room four oh two.", "set": "corridor", "label": "THE FOURTH FLOOR", "set_params": {"lights": [2.2, 5.0, 7.8, 10.6, 13.4, 16.2], "out_at": [[0.6, 0], [1.0, 1], [1.4, 2], [1.8, 3], [2.2, 4]], "haze": 0.72, "dust": 100, "cold_end": 0.22, "rim": "#ff5b28", "figure": {"x": 0.0, "z": 9.0, "rim": 1.1}}},
+        {"id": "l8", "text": "And this time, he is the one who answers.", "set": "card", "kicker": "VACANCY", "title": "ROOM\n403", "subtitle": "there is always one room", "transition": "dip"}
       ]
     }
-  ],
-  "fiction": true
+  ]
 }
