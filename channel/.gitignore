@@ -1,0 +1,3 @@
+.secrets/
+pending/*.published.json
+pending/*.skipped.json

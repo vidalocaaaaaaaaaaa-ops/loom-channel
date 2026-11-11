@@ -1,0 +1,346 @@
+{
+  "slug": "site9",
+  "title": "SITE NINE",
+  "style": "blueprint",
+  "aspect": "9:16",
+  "fps": 30,
+  "platform": "youtube",
+  "seed_base": 40,
+  "transition": "cut",
+  "fiction": true,
+  "voice": {
+    "name": "af_bella",
+    "speed": 1.06,
+    "gap": 0.34
+  },
+  "grade": {
+    "exposure": 1.0,
+    "contrast": 1.06,
+    "saturation": 1.0,
+    "bloom": 0.16,
+    "halation": 0.06,
+    "grain": 0.016,
+    "vignette": 0.3,
+    "ca": 0.0,
+    "tonemap": "reinhard",
+    "light_blur": 1.0
+  },
+  "captions": {
+    "family": "inter",
+    "weight": "Medium",
+    "size_h": 0.036,
+    "color": "#f2f4f8",
+    "highlight": null,
+    "uppercase": false,
+    "stroke": 0.0,
+    "shadow": 0.0,
+    "words_per_chunk": 6,
+    "max_chars": 30,
+    "anchor_y": 0.83,
+    "plate": "#0a0d14",
+    "plate_alpha": 0.55,
+    "pop": 0.0
+  },
+  "tags": [
+    "#sitenine",
+    "#fiction",
+    "#blueprint",
+    "#mystery",
+    "#scarystories",
+    "#fyp"
+  ],
+  "scripts_note": "Fiction. Framed as recovered survey logs; every number is invented for the story and the description says so.",
+  "episodes": [
+    {
+      "part": 1,
+      "slug": "site-9-part1",
+      "title": "THE SURVEY",
+      "open_card": {
+        "kicker": "SITE NINE",
+        "title": "LOG\n01",
+        "hold": 2.0
+      },
+      "end_card": {
+        "title": "SITE NINE",
+        "subtitle": "Log 02: Anomaly",
+        "hold": 2.4
+      },
+      "hook": "Log 01 of a survey that does not match the contract.",
+      "social": {
+        "body": "The crew surveyed four kilometres. The contract says eleven. This is a fiction series built from invented survey logs."
+      },
+      "script": [
+        {
+          "id": "l1",
+          "text": "Site nine was surveyed in April. The crew logged four kilometres.",
+          "viz": "statement",
+          "kicker": "LOG 01 \u00b7 THE SURVEY",
+          "transition": "cut"
+        },
+        {
+          "id": "l2",
+          "text": "The contract said eleven kilometres. Nobody could find the other seven.",
+          "viz": "statement",
+          "kicker": "THE CONTRACT"
+        },
+        {
+          "id": "l3",
+          "text": "Seven kilometres of pipeline are logged as built and never walked.",
+          "viz": "stat",
+          "value": 7,
+          "unit": " km",
+          "label": "logged as built, never surveyed",
+          "kicker": "THE GAP",
+          "source": "fiction \u2014 invented for this story"
+        },
+        {
+          "id": "l4",
+          "text": "The crew's own paperwork does not agree with the crew.",
+          "viz": "bars",
+          "kicker": "LOG VERSUS GROUND",
+          "rows": [
+            {
+              "label": "Logged as built",
+              "value": 11,
+              "unit": " km",
+              "accent": true
+            },
+            {
+              "label": "Found on the ground",
+              "value": 4,
+              "unit": " km"
+            }
+          ],
+          "source": "fiction \u2014 invented for this story"
+        },
+        {
+          "id": "l5",
+          "text": "Then the file closes for twenty nine years and reopens without a reason.",
+          "viz": "timeline",
+          "kicker": "THE FILE",
+          "items": [
+            {
+              "date": "APR 1996",
+              "text": "survey run"
+            },
+            {
+              "date": "MAY 1996",
+              "text": "sealed"
+            },
+            {
+              "date": "JUN 1996",
+              "text": "decommissioned"
+            },
+            {
+              "date": "2025",
+              "text": "reopened"
+            }
+          ]
+        },
+        {
+          "id": "l6",
+          "text": "The last page is a note in the surveyor's hand: do not walk the seventh.",
+          "viz": "quote",
+          "quote": "Do not walk the seventh.",
+          "attribution": "surveyor's note, page 44",
+          "transition": "dip"
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "slug": "site-9-part2",
+      "title": "ANOMALY",
+      "open_card": {
+        "kicker": "SITE NINE",
+        "title": "LOG\n02",
+        "hold": 2.0
+      },
+      "end_card": {
+        "title": "SITE NINE",
+        "subtitle": "Log 03: The Eleventh Valve",
+        "hold": 2.4
+      },
+      "hook": "Log 02. The pipeline moves four metres a night, and it is getting faster.",
+      "social": {
+        "body": "The survey team measured the same pipeline twice a night for a week. It was never in the same place."
+      },
+      "script": [
+        {
+          "id": "l1",
+          "text": "They measured the same section twice a night for a week.",
+          "viz": "statement",
+          "kicker": "LOG 02 \u00b7 ANOMALY",
+          "transition": "cut"
+        },
+        {
+          "id": "l2",
+          "text": "The pipeline was never in the same place twice.",
+          "viz": "statement",
+          "kicker": "THE READINGS"
+        },
+        {
+          "id": "l3",
+          "text": "By the seventh night it had moved twenty eight metres, always in the same direction.",
+          "viz": "line",
+          "kicker": "DRIFT, NIGHT BY NIGHT",
+          "points": [
+            0,
+            3,
+            5,
+            9,
+            14,
+            21,
+            28
+          ],
+          "labels": [
+            "N1",
+            "N2",
+            "N3",
+            "N4",
+            "N5",
+            "N6",
+            "N7"
+          ],
+          "source": "fiction \u2014 invented for this story"
+        },
+        {
+          "id": "l4",
+          "text": "Four metres a night on average. Which is not how steel behaves.",
+          "viz": "stat",
+          "value": 4,
+          "unit": " m/night",
+          "label": "average movement of a buried pipeline",
+          "kicker": "THE NUMBER",
+          "source": "fiction \u2014 invented for this story"
+        },
+        {
+          "id": "l5",
+          "text": "The direction it moved was toward the only room on the site still locked.",
+          "viz": "compare",
+          "kicker": "DIRECTION",
+          "left": {
+            "value": "28 m",
+            "label": "distance travelled in seven nights"
+          },
+          "right": {
+            "value": "1",
+            "label": "locked room on the whole site"
+          }
+        },
+        {
+          "id": "l6",
+          "text": "The team stopped measuring. They kept writing the same number every night.",
+          "viz": "quote",
+          "quote": "Same as yesterday. Four metres.",
+          "attribution": "log 02, night seven",
+          "transition": "dip"
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "slug": "site-9-part3",
+      "title": "THE ELEVENTH VALVE",
+      "open_card": {
+        "kicker": "SITE NINE",
+        "title": "LOG\n03",
+        "hold": 2.0
+      },
+      "end_card": {
+        "title": "SITE NINE",
+        "subtitle": "Log 04: Whoever Signed",
+        "hold": 2.4
+      },
+      "hook": "Log 03. The pipeline has eleven valves. The plan has ten.",
+      "social": {
+        "body": "Eleven valves on a ten-valve line, and the eleventh one is warm."
+      },
+      "script": [
+        {
+          "id": "l1",
+          "text": "The site plan lists ten valves. The crew found eleven.",
+          "viz": "statement",
+          "kicker": "LOG 03 \u00b7 THE ELEVENTH VALVE",
+          "transition": "cut"
+        },
+        {
+          "id": "l2",
+          "text": "The eleventh is not on any drawing, and it is the only one that is warm.",
+          "viz": "stat",
+          "value": 11,
+          "unit": " valves",
+          "label": "found on a line planned for ten",
+          "kicker": "THE COUNT",
+          "source": "fiction \u2014 invented for this story"
+        },
+        {
+          "id": "l3",
+          "text": "Everything else on site reads cold. The eleventh reads body temperature.",
+          "viz": "compare",
+          "kicker": "READINGS",
+          "left": {
+            "value": "9\u00b0",
+            "label": "ambient, three in the morning"
+          },
+          "right": {
+            "value": "37\u00b0",
+            "label": "the eleventh valve"
+          }
+        },
+        {
+          "id": "l4",
+          "text": "They traced its line back and it does not connect to the pipeline.",
+          "viz": "timeline",
+          "kicker": "THE TRACE",
+          "items": [
+            {
+              "date": "22:40",
+              "text": "valve found"
+            },
+            {
+              "date": "23:15",
+              "text": "traced east"
+            },
+            {
+              "date": "00:05",
+              "text": "leaves the plan"
+            },
+            {
+              "date": "01:30",
+              "text": "returns to site"
+            }
+          ]
+        },
+        {
+          "id": "l5",
+          "text": "It connects to the locked room, and the room has been drawing water all night.",
+          "viz": "bars",
+          "kicker": "WHERE IT GOES",
+          "rows": [
+            {
+              "label": "Line on the plan",
+              "value": 4,
+              "unit": " km"
+            },
+            {
+              "label": "Line as traced",
+              "value": 11,
+              "unit": " km",
+              "accent": true
+            }
+          ],
+          "source": "fiction \u2014 invented for this story"
+        },
+        {
+          "id": "l6",
+          "text": "The log for that night ends with one word, written by nobody on the crew.",
+          "viz": "quote",
+          "quote": "Occupied.",
+          "attribution": "log 03, final line",
+          "transition": "dip"
+        }
+      ]
+    }
+  ]
+}

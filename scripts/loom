@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# convenience wrapper: ./scripts/loom qc projects/room-402
+SKILL="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$SKILL"
+[ -f .env ] && source .env
+[ -d .venv ] && source .venv/bin/activate
+export LOOM_MODEL_DIR="${LOOM_MODEL_DIR:-$HOME/.cache/loom/models}"
+exec python -m loom.cli "$@"

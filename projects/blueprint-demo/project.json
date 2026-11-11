@@ -1,0 +1,32 @@
+{
+  "name": "blueprint-demo",
+  "title": "WHAT SIX HOURS DOES",
+  "style": "blueprint",
+  "aspect": "16:9",
+  "fps": 30,
+  "seed": 4,
+  "platform": "youtube",
+  "voice": { "name": "af_bella", "speed": 1.06, "gap": 0.34 },
+  "note": "Illustrative numbers only — this project exists to show the style. Replace every value with a sourced one before publishing.",
+  "captions": { "family": "inter", "weight": "Medium", "size_h": 0.035, "color": "#f2f4f8",
+                "highlight": null, "uppercase": false, "stroke": 0.0, "shadow": 0.0,
+                "words_per_chunk": 6, "max_chars": 30, "anchor_y": 0.87,
+                "plate": "#0a0d14", "plate_alpha": 0.55, "pop": 0.0 },
+  "script": [
+    { "id": "l1", "text": "Eight hours of sleep used to be a guess.", "viz": "statement",
+      "kicker": "SLEEP · PART 1", "transition": "cut" },
+    { "id": "l2", "text": "Then a lab started measuring what six hours a night actually costs.",
+      "viz": "statement", "kicker": "THE EXPERIMENT" },
+    { "id": "l3", "text": "After two weeks, reaction time had fallen by thirty two percent.",
+      "viz": "stat", "value": 32, "unit": "%", "label": "slower reaction time after 14 nights of six hours",
+      "kicker": "THE FINDING", "source": "illustrative example — replace with your source" },
+    { "id": "l4", "text": "But almost nobody in the study noticed it happening.",
+      "viz": "bars", "kicker": "WHAT THEY REPORTED",
+      "rows": [ { "label": "Rated their own alertness fine", "value": 78, "unit": "%", "accent": true },
+                { "label": "Actually impaired", "value": 32, "unit": "%" } ],
+      "source": "illustrative example — replace with your source" },
+    { "id": "l5", "text": "Sleep debt does not feel like debt. It feels like normal.",
+      "viz": "quote", "attribution": "the uncomfortable part",
+      "transition": "dip" }
+  ]
+}

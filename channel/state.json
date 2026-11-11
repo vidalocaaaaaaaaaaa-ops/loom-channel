@@ -1,0 +1,38 @@
+{
+  "released": {
+    "room402": [
+      1,
+      2,
+      3
+    ],
+    "site9": []
+  },
+  "pending": [
+    "room-402-part3"
+  ],
+  "history": [
+    {
+      "slug": "room-402",
+      "series": "room402",
+      "part": 1,
+      "status": "published-manually",
+      "uploaded_by_hand": true
+    },
+    {
+      "slug": "room-402-part2",
+      "series": "room402",
+      "part": 2,
+      "status": "published-manually",
+      "uploaded_by_hand": true
+    },
+    {
+      "slug": "room-402-part3",
+      "series": "room402",
+      "part": 3,
+      "status": "published-manually",
+      "uploaded_by_hand": true
+    }
+  ],
+  "cursor": 0,
+  "note": "Parts 1-3 were rendered before this automation existed; they are marked released so the queue starts at Part 4."
+}

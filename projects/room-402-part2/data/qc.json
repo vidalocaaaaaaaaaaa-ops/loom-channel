@@ -1,0 +1,125 @@
+{
+ "pass_": true,
+ "items": [
+  {
+   "gate": "duration",
+   "status": "pass",
+   "detail": "46.2s, 11 shots, 9 lines",
+   "fix": "shorts want 15-60 s; long-form wants 90 s+"
+  },
+  {
+   "gate": "line length",
+   "status": "pass",
+   "detail": "mean 3.6s, longest 5.2s",
+   "fix": "split anything over 8 s into two lines"
+  },
+  {
+   "gate": "cut rate",
+   "status": "pass",
+   "detail": "14.3 cuts/min",
+   "fix": "aim for a new shot every 2-4 s"
+  },
+  {
+   "gate": "caption density",
+   "status": "pass",
+   "detail": "13.4 chars/s on screen (limit 17-19, hard 24)",
+   "fix": "cut words: the eye cannot read faster than ~17 chars/s"
+  },
+  {
+   "gate": "caption chunking",
+   "status": "warn",
+   "detail": "33 groups, 0 over 6 words, 3 under 0.55 s",
+   "fix": "raise words_per_chunk or merge short groups"
+  },
+  {
+   "gate": "caption size",
+   "status": "pass",
+   "detail": "83 px = 4.3% of frame height (want >= 3.0%)",
+   "fix": "raise captions.size_h"
+  },
+  {
+   "gate": "caption safe area",
+   "status": "pass",
+   "detail": "caption band 0.70-0.81 vs tiktok UI (bottom 0.17)",
+   "fix": "move anchor_y up ~5% so the app UI does not cover the words"
+  },
+  {
+   "gate": "text fits frame",
+   "status": "pass",
+   "detail": "longest line 74% of width (wrap limit 89%)",
+   "fix": "shorten sentences or raise max_chars"
+  },
+  {
+   "gate": "loudness",
+   "status": "pass",
+   "detail": "-14.2 LUFS (target -14)",
+   "fix": "change music level or master target"
+  },
+  {
+   "gate": "true peak",
+   "status": "pass",
+   "detail": "-1.0 dBTP (limit -1.0)",
+   "fix": "lower the master ceiling"
+  },
+  {
+   "gate": "clipping",
+   "status": "pass",
+   "detail": "0.000% samples at full scale",
+   "fix": "lower the limiter ceiling"
+  },
+  {
+   "gate": "opening sound",
+   "status": "pass",
+   "detail": "0.16s of silence before the first sound",
+   "fix": "the hook has to start inside the first half second"
+  },
+  {
+   "gate": "voice over music",
+   "status": "pass",
+   "detail": "voice sits 19.6 dB above the bed (want >= 9)",
+   "fix": "duck the score harder or lower music level_db"
+  },
+  {
+   "gate": "dc offset",
+   "status": "pass",
+   "detail": "0.0001",
+   "fix": "high-pass the mix"
+  },
+  {
+   "gate": "frame luminance",
+   "status": "pass",
+   "detail": "mean 9% luma (dark-but-readable band 6-42%)",
+   "fix": "raise exposure or ambient light"
+  },
+  {
+   "gate": "black frames",
+   "status": "warn",
+   "detail": "6 of 36 sampled frames near black",
+   "fix": "check dip transitions \u2014 more than 2 is a dead video"
+  },
+  {
+   "gate": "highlight clipping",
+   "status": "pass",
+   "detail": "0.0% of pixels blown",
+   "fix": "lower exposure or bloom"
+  },
+  {
+   "gate": "motion",
+   "status": "warn",
+   "detail": "8/35 consecutive samples identical",
+   "fix": "add camera drift or an animated element to static shots"
+  },
+  {
+   "gate": "caption contrast",
+   "status": "pass",
+   "detail": "16.3:1 against the caption band (WCAG AA needs 4.5:1)",
+   "fix": "add a plate/scrim behind captions or lift the grade"
+  },
+  {
+   "gate": "contact sheet",
+   "status": "pass",
+   "detail": "/home/user/faceless-videos-v3/projects/room-402-part2/review/contact_sheet.jpg",
+   "fix": ""
+  }
+ ]
+}

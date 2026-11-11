@@ -1,0 +1,119 @@
+{
+ "pass_": true,
+ "items": [
+  {
+   "gate": "duration",
+   "status": "pass",
+   "detail": "18.2s, 5 shots, 5 lines",
+   "fix": "shorts want 15-60 s; long-form wants 90 s+"
+  },
+  {
+   "gate": "line length",
+   "status": "pass",
+   "detail": "mean 3.0s, longest 3.9s",
+   "fix": "split anything over 8 s into two lines"
+  },
+  {
+   "gate": "cut rate",
+   "status": "pass",
+   "detail": "16.5 cuts/min",
+   "fix": "aim for a new shot every 2-4 s"
+  },
+  {
+   "gate": "caption density",
+   "status": "pass",
+   "detail": "15.7 chars/s on screen (limit 17-19, hard 24)",
+   "fix": "cut words: the eye cannot read faster than ~17 chars/s"
+  },
+  {
+   "gate": "caption chunking",
+   "status": "pass",
+   "detail": "10 groups, 0 over 6 words, 0 under 0.55 s",
+   "fix": "raise words_per_chunk or merge short groups"
+  },
+  {
+   "gate": "caption size",
+   "status": "pass",
+   "detail": "38 px = 3.5% of frame height (want >= 3.0%)",
+   "fix": "raise captions.size_h"
+  },
+  {
+   "gate": "caption safe area",
+   "status": "pass",
+   "detail": "caption band 0.81-0.93 vs youtube UI (bottom 0.06)",
+   "fix": "move anchor_y up ~5% so the app UI does not cover the words"
+  },
+  {
+   "gate": "text fits frame",
+   "status": "pass",
+   "detail": "longest line 33% of width (wrap limit 90%)",
+   "fix": "shorten sentences or raise max_chars"
+  },
+  {
+   "gate": "loudness",
+   "status": "pass",
+   "detail": "-15.0 LUFS (target -14)",
+   "fix": "change music level or master target"
+  },
+  {
+   "gate": "true peak",
+   "status": "pass",
+   "detail": "-1.0 dBTP (limit -1.0)",
+   "fix": "lower the master ceiling"
+  },
+  {
+   "gate": "clipping",
+   "status": "pass",
+   "detail": "0.000% samples at full scale",
+   "fix": "lower the limiter ceiling"
+  },
+  {
+   "gate": "opening sound",
+   "status": "pass",
+   "detail": "0.24s of silence before the first sound",
+   "fix": "the hook has to start inside the first half second"
+  },
+  {
+   "gate": "dc offset",
+   "status": "pass",
+   "detail": "0.0009",
+   "fix": "high-pass the mix"
+  },
+  {
+   "gate": "frame luminance",
+   "status": "pass",
+   "detail": "mean 8% luma (dark-but-readable band 6-42%)",
+   "fix": "raise exposure or ambient light"
+  },
+  {
+   "gate": "black frames",
+   "status": "warn",
+   "detail": "9 of 36 sampled frames near black",
+   "fix": "check dip transitions \u2014 more than 2 is a dead video"
+  },
+  {
+   "gate": "highlight clipping",
+   "status": "pass",
+   "detail": "0.0% of pixels blown",
+   "fix": "lower exposure or bloom"
+  },
+  {
+   "gate": "motion",
+   "status": "pass",
+   "detail": "5/35 consecutive samples identical",
+   "fix": "add camera drift or an animated element to static shots"
+  },
+  {
+   "gate": "caption contrast",
+   "status": "pass",
+   "detail": "16.3:1 against the caption band (WCAG AA needs 4.5:1)",
+   "fix": "add a plate/scrim behind captions or lift the grade"
+  },
+  {
+   "gate": "contact sheet",
+   "status": "pass",
+   "detail": "/home/user/faceless-videos-v3/projects/blueprint-demo/review/contact_sheet.jpg",
+   "fix": ""
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+{
+ "voice_rms_db": -16.46,
+ "bed_rms_db": -35.89,
+ "voice_over_bed_db": 19.43,
+ "music_level_db": -19.0,
+ "cues": 10,
+ "sfx_events": 12
+}

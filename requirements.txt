@@ -1,0 +1,11 @@
+# core — everything the skill needs to render a video
+numpy>=1.24
+pillow>=10.0
+soundfile>=0.12
+imageio-ffmpeg>=0.4.9      # bundles a static ffmpeg binary: no system ffmpeg needed
+kokoro-onnx>=0.4.0         # local TTS (Apache-2.0 model, ~350 MB, downloaded by setup.sh)
+onnxruntime>=1.17
+
+# optional, auto-installed by setup.sh when the wheels exist for the platform
+scipy>=1.10                # faster IIR filters in the audio path
+faster-whisper>=1.0        # only for --align whisper (forced alignment via transcription)

@@ -1,0 +1,305 @@
+{
+  "name": "room-402-part3",
+  "title": "THE GUEST",
+  "style": "nightline",
+  "aspect": "9:16",
+  "fps": 30,
+  "seed": 13,
+  "platform": "tiktok",
+  "series": {
+    "part": 3,
+    "of": "ROOM 402"
+  },
+  "voice": {
+    "name": "am_onyx",
+    "speed": 0.92,
+    "gap": 0.62
+  },
+  "open_card": {
+    "kicker": "PART THREE",
+    "title": "THE\nGUEST",
+    "hold": 2.2
+  },
+  "end_card": {
+    "title": "ROOM 402",
+    "subtitle": "Part Four: Checkout",
+    "hold": 2.6
+  },
+  "transition": "dissolve",
+  "grade": {
+    "exposure": 1.06,
+    "contrast": 1.18,
+    "saturation": 0.88,
+    "bloom": 0.26,
+    "halation": 0.18,
+    "grain": 0.03,
+    "vignette": 0.58,
+    "ca": 1.0,
+    "scrim": 0.34,
+    "split": [
+      "#2b4a6b",
+      "#ffd9a8",
+      0.26
+    ]
+  },
+  "captions": {
+    "family": "barlow",
+    "size_h": 0.043,
+    "color": "#f3f1ea",
+    "highlight": "#ffcc33",
+    "uppercase": true,
+    "stroke": 0.05,
+    "shadow": 0.16,
+    "words_per_chunk": 4,
+    "max_chars": 20,
+    "anchor_y": 0.755,
+    "pop": 0.14
+  },
+  "script": [
+    {
+      "id": "l1",
+      "text": "The page listed two names for tonight. He had written only one.",
+      "set": "corridor",
+      "date": "2:41 A.M.",
+      "set_params": {
+        "lights": [
+          2.6,
+          6.4,
+          10.2,
+          14.0
+        ],
+        "dead": [
+          1
+        ],
+        "haze": 0.6,
+        "dust": 80
+      }
+    },
+    {
+      "id": "l2",
+      "text": "Room four oh two had no lock. The handle turned before he touched it.",
+      "set": "door",
+      "label": "THE FOURTH FLOOR",
+      "set_params": {
+        "dist": 4.4,
+        "number": "402",
+        "spill": "#ff7a33",
+        "spill_amt": 1.3
+      },
+      "cam": {
+        "fov": 68,
+        "pos": [
+          0.0,
+          1.34,
+          0.0
+        ],
+        "z": [
+          [
+            0,
+            0.0
+          ],
+          [
+            4,
+            0.5
+          ]
+        ]
+      }
+    },
+    {
+      "id": "l3",
+      "text": "He stepped inside and closed the door, the way you do when someone is waiting.",
+      "set": "card",
+      "kicker": "TONIGHT'S PAGE",
+      "title": "THE\nGUEST",
+      "subtitle": "no arrival time written"
+    },
+    {
+      "id": "l4",
+      "text": "A man stood with his back to the door, in a coat thirty years out of date.",
+      "set": "room",
+      "label": "ROOM 402 \u00b7 INTERIOR",
+      "set_params": {
+        "lamp": [
+          1.3,
+          1.4,
+          2.2
+        ],
+        "haze": 0.52,
+        "figure": {
+          "x": 0.62,
+          "z": 3.9,
+          "rim": 0.95,
+          "pose": {
+            "arms": 0.05
+          }
+        }
+      }
+    },
+    {
+      "id": "l5",
+      "text": "He said, you're in my room. The man said his name without turning around.",
+      "set": "door",
+      "date": "2:41 A.M.",
+      "set_params": {
+        "dist": 3.1,
+        "number": "402",
+        "spill": "#ff6a2a",
+        "spill_amt": 0.9
+      },
+      "cam": {
+        "fov": 54,
+        "pos": [
+          0.0,
+          1.3,
+          0.0
+        ],
+        "z": [
+          [
+            0,
+            0.0
+          ],
+          [
+            4,
+            0.35
+          ]
+        ],
+        "pitch": [
+          [
+            0,
+            -0.03
+          ],
+          [
+            4,
+            0.02
+          ]
+        ],
+        "yaw": [
+          [
+            0,
+            0.012
+          ],
+          [
+            4,
+            -0.016
+          ]
+        ]
+      }
+    },
+    {
+      "id": "l6",
+      "text": "On the nightstand, tonight's entry was open. The second name was already written.",
+      "set": "room",
+      "date": "2:41 A.M.",
+      "set_params": {
+        "lamp": [
+          1.3,
+          1.4,
+          2.2
+        ],
+        "haze": 0.45,
+        "rain": 0.85,
+        "figure": {
+          "x": 0.34,
+          "z": 3.3,
+          "rim": 1.1,
+          "pose": {
+            "hand_up": 0.5
+          }
+        }
+      }
+    },
+    {
+      "id": "l7",
+      "text": "The ink was still wet. The handwriting was his, from an angle he never wrote from.",
+      "set": "corridor_far",
+      "date": "2:41 A.M.",
+      "set_params": {
+        "lights": [
+          3.0,
+          7.2,
+          11.4,
+          15.6
+        ],
+        "dead": [
+          3
+        ],
+        "cold_end": 0.6,
+        "rim": "#ff5b28",
+        "haze": 0.78,
+        "figure": {
+          "x": 0.0,
+          "z": 12.0,
+          "rim": 1.25
+        }
+      }
+    },
+    {
+      "id": "l8",
+      "text": "Then the guest stood, and every lamp in the corridor went out at once.",
+      "set": "corridor",
+      "label": "THE FOURTH FLOOR",
+      "set_params": {
+        "lights": [
+          2.2,
+          5.0,
+          7.8,
+          10.6,
+          13.4,
+          16.2
+        ],
+        "out_at": [
+          [
+            0.5,
+            0
+          ],
+          [
+            0.8,
+            1
+          ],
+          [
+            1.1,
+            2
+          ],
+          [
+            1.4,
+            3
+          ],
+          [
+            1.7,
+            4
+          ]
+        ],
+        "haze": 0.72,
+        "dust": 100,
+        "cold_end": 0.22,
+        "figure": {
+          "x": 0.0,
+          "z": 9.0,
+          "rim": 1.15
+        },
+        "rim": "#ff5b28"
+      }
+    },
+    {
+      "id": "l9",
+      "text": "He signed the second name. Someone in the corridor said: see you at checkout.",
+      "set": "card",
+      "kicker": "CHECK-IN",
+      "title": "2:41\nA.M.",
+      "subtitle": "the fourth floor light came on",
+      "transition": "dip"
+    }
+  ],
+  "hook": "Part 3 of ROOM 402. Part 2 ended with two names on tonight's page \u2014 one of them already in the room.",
+  "social": {
+    "body": "Two names went into the register that night. One of them was already dead. Tonight he goes inside room 402. Start with Part 1."
+  },
+  "tags": [
+    "#room402",
+    "#part3",
+    "#theguest",
+    "#creepy",
+    "#horrorstory",
+    "#fyp"
+  ]
+}

@@ -1,0 +1,363 @@
+{
+ "voice": "af_bella",
+ "speed": 1.06,
+ "sr": 48000,
+ "duration": 18.245,
+ "speech_seconds": 15.54,
+ "lines": [
+  {
+   "id": "l1",
+   "text": "Eight hours of sleep used to be a guess.",
+   "start": 0.45,
+   "end": 2.42,
+   "words": 9,
+   "conf": 0.75
+  },
+  {
+   "id": "l2",
+   "text": "Then a lab started measuring what six hours a night actually costs.",
+   "start": 2.7600000000000002,
+   "end": 6.746,
+   "words": 12,
+   "conf": 0.727
+  },
+  {
+   "id": "l3",
+   "text": "After two weeks, reaction time had fallen by thirty two percent.",
+   "start": 7.086,
+   "end": 10.773333333333333,
+   "words": 11,
+   "conf": 1.0
+  },
+  {
+   "id": "l4",
+   "text": "But almost nobody in the study noticed it happening.",
+   "start": 11.113333333333333,
+   "end": 13.851333333333333,
+   "words": 9,
+   "conf": 0.75
+  },
+  {
+   "id": "l5",
+   "text": "Sleep debt does not feel like debt. It feels like normal.",
+   "start": 14.191333333333333,
+   "end": 17.345333333333333,
+   "words": 11,
+   "conf": 1.0
+  }
+ ],
+ "words": [
+  {
+   "word": "Eight",
+   "start": 0.465,
+   "end": 0.685,
+   "line": "l1"
+  },
+  {
+   "word": "hours",
+   "start": 0.685,
+   "end": 0.74,
+   "line": "l1"
+  },
+  {
+   "word": "of",
+   "start": 0.74,
+   "end": 0.995,
+   "line": "l1"
+  },
+  {
+   "word": "sleep",
+   "start": 0.995,
+   "end": 1.1,
+   "line": "l1"
+  },
+  {
+   "word": "used",
+   "start": 1.1,
+   "end": 1.405,
+   "line": "l1"
+  },
+  {
+   "word": "to",
+   "start": 1.56,
+   "end": 1.735,
+   "line": "l1"
+  },
+  {
+   "word": "be",
+   "start": 1.735,
+   "end": 1.825,
+   "line": "l1"
+  },
+  {
+   "word": "a",
+   "start": 1.825,
+   "end": 2.015,
+   "line": "l1"
+  },
+  {
+   "word": "guess.",
+   "start": 2.015,
+   "end": 2.375,
+   "line": "l1"
+  },
+  {
+   "word": "Then",
+   "start": 2.785,
+   "end": 3.0,
+   "line": "l2"
+  },
+  {
+   "word": "a",
+   "start": 3.0,
+   "end": 3.275,
+   "line": "l2"
+  },
+  {
+   "word": "lab",
+   "start": 3.275,
+   "end": 3.43,
+   "line": "l2"
+  },
+  {
+   "word": "started",
+   "start": 3.43,
+   "end": 3.88,
+   "line": "l2"
+  },
+  {
+   "word": "measuring",
+   "start": 3.88,
+   "end": 4.47,
+   "line": "l2"
+  },
+  {
+   "word": "what",
+   "start": 4.47,
+   "end": 4.555,
+   "line": "l2"
+  },
+  {
+   "word": "six",
+   "start": 4.555,
+   "end": 4.88,
+   "line": "l2"
+  },
+  {
+   "word": "hours",
+   "start": 4.88,
+   "end": 5.015,
+   "line": "l2"
+  },
+  {
+   "word": "a",
+   "start": 5.335,
+   "end": 5.595,
+   "line": "l2"
+  },
+  {
+   "word": "night",
+   "start": 5.595,
+   "end": 5.695,
+   "line": "l2"
+  },
+  {
+   "word": "actually",
+   "start": 5.695,
+   "end": 6.17,
+   "line": "l2"
+  },
+  {
+   "word": "costs.",
+   "start": 6.17,
+   "end": 6.695,
+   "line": "l2"
+  },
+  {
+   "word": "After",
+   "start": 7.101,
+   "end": 7.256,
+   "line": "l3"
+  },
+  {
+   "word": "two",
+   "start": 7.256,
+   "end": 7.401,
+   "line": "l3"
+  },
+  {
+   "word": "weeks,",
+   "start": 7.401,
+   "end": 7.786,
+   "line": "l3"
+  },
+  {
+   "word": "reaction",
+   "start": 7.786,
+   "end": 7.951,
+   "line": "l3"
+  },
+  {
+   "word": "time",
+   "start": 8.276,
+   "end": 8.541,
+   "line": "l3"
+  },
+  {
+   "word": "had",
+   "start": 8.541,
+   "end": 8.781,
+   "line": "l3"
+  },
+  {
+   "word": "fallen",
+   "start": 8.781,
+   "end": 9.191,
+   "line": "l3"
+  },
+  {
+   "word": "by",
+   "start": 9.191,
+   "end": 9.246,
+   "line": "l3"
+  },
+  {
+   "word": "thirty",
+   "start": 9.246,
+   "end": 9.766,
+   "line": "l3"
+  },
+  {
+   "word": "two",
+   "start": 9.766,
+   "end": 10.046,
+   "line": "l3"
+  },
+  {
+   "word": "percent.",
+   "start": 10.046,
+   "end": 10.726,
+   "line": "l3"
+  },
+  {
+   "word": "But",
+   "start": 11.1283,
+   "end": 11.1833,
+   "line": "l4"
+  },
+  {
+   "word": "almost",
+   "start": 11.1833,
+   "end": 11.2933,
+   "line": "l4"
+  },
+  {
+   "word": "nobody",
+   "start": 11.2933,
+   "end": 11.5733,
+   "line": "l4"
+  },
+  {
+   "word": "in",
+   "start": 11.7733,
+   "end": 11.9933,
+   "line": "l4"
+  },
+  {
+   "word": "the",
+   "start": 11.9933,
+   "end": 12.0483,
+   "line": "l4"
+  },
+  {
+   "word": "study",
+   "start": 12.0483,
+   "end": 12.3283,
+   "line": "l4"
+  },
+  {
+   "word": "noticed",
+   "start": 12.3283,
+   "end": 12.7683,
+   "line": "l4"
+  },
+  {
+   "word": "it",
+   "start": 12.7683,
+   "end": 13.0983,
+   "line": "l4"
+  },
+  {
+   "word": "happening.",
+   "start": 13.0983,
+   "end": 13.7283,
+   "line": "l4"
+  },
+  {
+   "word": "Sleep",
+   "start": 14.2113,
+   "end": 14.4763,
+   "line": "l5"
+  },
+  {
+   "word": "debt",
+   "start": 14.4763,
+   "end": 14.5663,
+   "line": "l5"
+  },
+  {
+   "word": "does",
+   "start": 14.5663,
+   "end": 14.8113,
+   "line": "l5"
+  },
+  {
+   "word": "not",
+   "start": 14.8113,
+   "end": 14.9413,
+   "line": "l5"
+  },
+  {
+   "word": "feel",
+   "start": 14.9413,
+   "end": 15.1113,
+   "line": "l5"
+  },
+  {
+   "word": "like",
+   "start": 15.1313,
+   "end": 15.5063,
+   "line": "l5"
+  },
+  {
+   "word": "debt.",
+   "start": 15.6213,
+   "end": 15.8763,
+   "line": "l5"
+  },
+  {
+   "word": "It",
+   "start": 15.8763,
+   "end": 15.9313,
+   "line": "l5"
+  },
+  {
+   "word": "feels",
+   "start": 16.2963,
+   "end": 16.4163,
+   "line": "l5"
+  },
+  {
+   "word": "like",
+   "start": 16.4163,
+   "end": 16.6913,
+   "line": "l5"
+  },
+  {
+   "word": "normal.",
+   "start": 16.6913,
+   "end": 17.3013,
+   "line": "l5"
+  }
+ ]
+}

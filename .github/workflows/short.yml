@@ -1,0 +1,142 @@
+name: short
+
+# Renders one episode, then waits for a human before it publishes.
+# Approvals live on the 'youtube-approval' environment (Settings -> Environments),
+# so the upload job has no secrets until somebody clicks Approve.
+
+on:
+  schedule:
+    - cron: "0 17 * * 1"        # Mondays 17:00 UTC = 18:00 Casablanca
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "series:part (e.g. room402:4). Blank = next in rotation."
+        required: false
+        default: ""
+      draft:
+        description: "Half-scale smoke test (renders fast, never publishes)"
+        type: boolean
+        default: false
+      publish:
+        description: "Publish after approval"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: short
+  cancel-in-progress: false
+
+jobs:
+  render:
+    name: render + QC
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    outputs:
+      manifest: ${{ steps.make.outputs.manifest }}
+      slug: ${{ steps.make.outputs.slug }}
+      title: ${{ steps.make.outputs.title }}
+      draft: ${{ steps.make.outputs.draft }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      # the voice model is ~350 MB; cache it or every run pays for it again
+      - name: cache voice model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/loom/models
+          key: loom-models-kokoro-v1.0
+
+      - name: install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          bash scripts/setup.sh
+
+      - name: render the next episode
+        id: make
+        env:
+          LOOM_MODEL_DIR: ~/.cache/loom/models
+          EP: ${{ inputs.episode }}
+          DRAFT: ${{ inputs.draft }}
+        run: |
+          args="--gh-output"
+          if [ "$DRAFT" = "true" ]; then args="$args --draft"; else args="$args --crf 22 --preset medium"; fi
+          if [ -n "$EP" ]; then
+            series="${EP%%:*}"; part="${EP##*:}"
+            python channel/make_episode.py --series "$series" --part "$part" $args
+          else
+            python channel/make_episode.py --next $args
+          fi
+
+      - name: summary
+        run: |
+          {
+            echo "### Ready for approval"
+            echo ""
+            echo "**${{ steps.make.outputs.title }}**"
+            echo ""
+            echo "Manifest: \`${{ steps.make.outputs.manifest }}\`"
+            sed -n '1,40p' "${{ steps.make.outputs.manifest }}" || true
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: episode
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            projects/**/renders/master.mp4
+            projects/**/deliver/cover.jpg
+            projects/**/deliver/caption.txt
+            projects/**/script.md
+            channel/pending/*.json
+            channel/state.json
+
+  publish:
+    name: publish (needs approval)
+    needs: render
+    if: needs.render.outputs.manifest != '' && needs.render.outputs.draft != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: youtube-approval      # <- the gate: reviewers approve here
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: episode
+
+      - name: publish to YouTube
+        if: inputs.publish != false
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          python channel/upload_youtube.py \
+            --manifest "${{ needs.render.outputs.manifest }}" \
+            --privacy public | tee /tmp/publish.log
+          grep -o 'https://youtu.be/[A-Za-z0-9_-]*' /tmp/publish.log | head -1 >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: record the release
+        run: |
+          git config user.name  "loom-bot"
+          git config user.email "loom-bot@users.noreply.github.com"
+          git add channel/state.json channel/pending || true
+          if git diff --cached --quiet; then
+            echo "state unchanged"
+          else
+            git commit -m "release: $(python -c "import json;print(json.load(open('channel/state.json'))['history'][-1]['slug'])")"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi

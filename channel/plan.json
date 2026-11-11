@@ -1,0 +1,15 @@
+{
+  "rotation": ["room402", "site9"],
+  "schedule": "0 17 * * 1",
+  "timezone_note": "cron in .github/workflows/short.yml is UTC; 17:00 UTC = 18:00 Casablanca (winter) / 19:00 (summer).",
+  "defaults": {
+    "privacy": "public",
+    "made_for_kids": false,
+    "category_id": "24"
+  },
+  "notes": [
+    "One episode per run. The rotation alternates series so the channel is not one long story.",
+    "Episodes are authored in channel/series/*.json. Add an episode object and it joins the queue.",
+    "Nothing is published without a human approval on the 'youtube-approval' environment."
+  ]
+}
