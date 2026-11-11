@@ -8,7 +8,8 @@
     "site9": []
   },
   "pending": [
-    "room-402-part3"
+    "room-402-part3",
+    "room-402"
   ],
   "history": [
     {
@@ -31,6 +32,13 @@
       "part": 3,
       "status": "published-manually",
       "uploaded_by_hand": true
+    },
+    {
+      "slug": "room-402",
+      "series": "room402",
+      "part": 1,
+      "rendered_at": "2026-11-11T19:02:50Z",
+      "status": "awaiting-approval"
     }
   ],
   "cursor": 0,
