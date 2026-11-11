@@ -34,6 +34,10 @@ jobs:
     name: render + QC
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    env:
+      # absolute on purpose: '~' is not expanded in env values, which made the
+      # installer and the renderer disagree about where the voice model lives
+      LOOM_MODEL_DIR: ${{ github.workspace }}/.loom-models
     outputs:
       manifest: ${{ steps.make.outputs.manifest }}
       slug: ${{ steps.make.outputs.slug }}
@@ -51,7 +55,7 @@ jobs:
       - name: cache voice model
         uses: actions/cache@v4
         with:
-          path: ~/.cache/loom/models
+          path: .loom-models
           key: loom-models-kokoro-v1.0
 
       - name: install
@@ -60,10 +64,18 @@ jobs:
           pip install -r requirements.txt
           bash scripts/setup.sh
 
+      - name: check the voice model landed
+        run: |
+          ls -la "$LOOM_MODEL_DIR" || true
+          test -s "$LOOM_MODEL_DIR/kokoro-v1.0.onnx" || {
+            echo "::error::voice model missing from $LOOM_MODEL_DIR"; exit 1; }
+          test -s "$LOOM_MODEL_DIR/voices-v1.0.bin" || {
+            echo "::error::voices file missing from $LOOM_MODEL_DIR"; exit 1; }
+          du -sh "$LOOM_MODEL_DIR"
+
       - name: render the next episode
         id: make
         env:
-          LOOM_MODEL_DIR: ~/.cache/loom/models
           EP: ${{ inputs.episode }}
           DRAFT: ${{ inputs.draft }}
         run: |
